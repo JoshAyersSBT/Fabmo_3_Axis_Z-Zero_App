@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Axis Z-Zero plate</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="/fabmo/dashboard/static/js/libs/fabmo.js"></script> 
+    <script rel="module" src="js/app.js"></script>
+    <style>
+        /* Styles for the how-to pane */
+        #how-to-pane {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 70%;
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        #close-how-to {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>3-Axis Z-Zero Plate Tool</h1>
+        <div>
+            <div class="button-container">
+                <button id="C10-Messure Outside Corner" class="action-button"> C10-Messure Outside Corner</button>
+                <button id="C11-Messure-Inside-Corner" class="action-button"> C11-Messure-Inside-Corner </button>
+                <button id="C12-Calculate-Contact-Diameter" class="action-button"> C12-Calculate-Contact-Diameter </button>   
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="How-Too" class="action-button">How to use your 3 Axis Z-Zero Plate.</button>
+        </div>
+    </div>
+
+    <!-- How-To Pane -->
+    <div id="how-to-pane">
+        <button id="close-how-to">Close</button>
+        <h2>How to use your 3 Axis Z-Zero Plate</h2>
+        <div id="instructions-content">
+            <h3>C10-Messure Outside Corner</h3>
+            <p>Use this button to measure the outside corner of the material. Place the Z-Zero plate in the appropriate position and press this button to begin the measuring process.</p>
+            <img src="images/outside_corner_diagram.png" alt="Outside Corner Diagram" width="300">
+            
+            <h3>C11-Messure-Inside-Corner</h3>
+            <p>Use this button to measure the inside corner of your material. Make sure the Z-Zero plate is properly positioned before pressing the button.</p>
+            <img src="images/inside_corner_diagram.png" alt="Inside Corner Diagram" width="300">
+            
+            <h3>C12-Calculate-Contact-Diameter</h3>
+            <p>This button calculates the contact diameter based on the points you have measured. Ensure all necessary corners are measured before using this button.</p>
+            <img src="images/contact_diameter_diagram.png" alt="Contact Diameter Diagram" width="300">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle showing and hiding the How-To pane
+        document.getElementById('How-Too').addEventListener('click', function() {
+            document.getElementById('how-to-pane').style.display = 'block';
+        });
+
+        document.getElementById('close-how-to').addEventListener('click', function() {
+            document.getElementById('how-to-pane').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

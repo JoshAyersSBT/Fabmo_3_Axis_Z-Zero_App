@@ -1,0 +1,12 @@
+{
+    "name": "three_axis_z-zero_plate",
+    "license": "MIT",
+    "id": "3-AxisZ-zeroPlate",
+    "main": "./index.html",
+    "icon": "icon.png",
+    "icon_color": "#360d61",
+    "version": "0.0.1",
+    "author": "Joshua Ayers",
+    "description": "example of file loading ui and client side behavior"
+  }
+  
